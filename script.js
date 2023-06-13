@@ -6,7 +6,7 @@ const sleep = (interval) => {
     while (now() < end);
 };
 
-const sum = (a, b) => a + b;
+const sum = (a, b) => (a, b);
 
 for (const i of Object.keys(100)) {
     var messageInput = document.getElementById('message');
