@@ -1,19 +1,22 @@
-const now = (date = new Date()) => date.getTime();
+// const now = () => new Date().getTime();
 
-const sleep = (interval) => {
-    interval *= 1000
-    const end = now() + interval;
-    while (now() < end);
-};
+// const sleep = (interval) => {
+//     const interval_otv = interval * 1000;
+//     const end = now() + interval_otv;
+//     while (now() < end);
+// };
 
 const sum = (a, b) => a + ' ' + b;
 
-i = 100
-while (i > 0) {
-    var messageInput = document.getElementById('message');
-    var messageInput2 = document.getElementById('hello-message');
-    const amount = sum(messageInput.value, messageInput2.value);
-    console.log(amount, i);
-    sleep(0.1)
-    i -= 1;
-};
+const messageInput = document.getElementById('message');
+const messageInput2 = document.getElementById('hello-message');
+
+if (messageInput !== null && messageInput2 !== null) {
+    for (let i = 100; i > 0; i--) {
+        setTimeout(() => {
+            const amount = sum(messageInput.value, messageInput2.value);
+            console.log(amount, i);
+        }, `${10 * 1000}`);
+    };
+}
+
