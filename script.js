@@ -1,3 +1,15 @@
+const color = (kind) => {
+    const colors = {
+      info: `\x1b[0;${kind}m`
+    };
+    const color = colors.info;
+    return (...s) => {
+      console.log(color + s);
+    };
+  };
+  
+  
+
 // const now = () => new Date().getTime();
 
 // const sleep = (interval) => {
@@ -15,7 +27,7 @@ if (messageInput !== null && messageInput2 !== null) {
     for (let i = 100; i > 0; i--) {
         setTimeout(() => {
             const amount = sum(messageInput.value, messageInput2.value);
-            console.log(amount, i);
+            color(92)(amount + ' ' + i);
         }, (1 * 1000));
     };
 }
