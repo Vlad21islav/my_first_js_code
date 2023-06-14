@@ -13,10 +13,10 @@ const messageInput2 = document.getElementById('hello-message');
 
 if (messageInput !== null && messageInput2 !== null) {
     for (let i = 100; i > 0; i--) {
-        setTimeout(() => {
+        setInterval(function() {
             const amount = sum(messageInput.value, messageInput2.value);
             console.log(amount, i);
-        }, `${10 * 1000}`);
+        }, (1 * 1000));
     };
 }
 
